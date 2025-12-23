@@ -59,4 +59,9 @@ app.post('/admin/delete-player', (req, res) => {
     res.redirect('/admin');
 });
 
-app.listen(3000, () => console.log("VIM Hub Back to Stable: http://localhost:3000"));
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`VIM Hub running on port ${PORT}`);
+});
