@@ -1,0 +1,44 @@
+<%- include('partials/navbar') %>
+
+<main class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-20">
+        <h2 class="text-6xl font-black italic uppercase tracking-tighter mb-4">MATCH <span class="text-blue-500">CENTER</span></h2>
+        <p class="text-xs font-bold tracking-[0.5em] opacity-40 uppercase">Broadcasts & Schedule</p>
+    </div>
+
+    <% if(liveLink) { %>
+        <div class="glass p-2 rounded-[40px] border-white/10 mb-20 shadow-2xl">
+            <div class="aspect-video w-full rounded-[35px] overflow-hidden">
+                <iframe class="w-full h-full" src="<%= liveLink %>" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    <% } %>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <% if(matches.length > 0) { %>
+            <% matches.forEach(m => { %>
+                <div class="glass p-10 rounded-[40px] border-white/5 relative overflow-hidden group">
+                    <div class="flex justify-between items-center relative z-10">
+                        <div class="text-center w-1/3">
+                            <img src="<%= m.logoA %>" class="w-20 h-20 object-contain mx-auto mb-4 group-hover:scale-110 transition">
+                            <h4 class="font-black uppercase text-sm"><%= m.teamA %></h4>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-blue-500 font-black italic text-2xl">VS</span>
+                            <p class="text-[10px] opacity-40 mt-2 font-bold"><%= m.time %></p>
+                        </div>
+                        <div class="text-center w-1/3">
+                            <img src="<%= m.logoB %>" class="w-20 h-20 object-contain mx-auto mb-4 group-hover:scale-110 transition">
+                            <h4 class="font-black uppercase text-sm"><%= m.teamB %></h4>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition"></div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <div class="md:col-span-2 text-center py-20 glass rounded-[40px] opacity-20 italic uppercase tracking-widest">
+                No matches currently scheduled
+            </div>
+        <% } %>
+    </div>
+</main>

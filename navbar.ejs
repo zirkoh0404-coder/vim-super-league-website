@@ -1,0 +1,24 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #02040a; color: white; margin: 0; }
+    .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+</style>
+
+<nav class="glass sticky top-0 z-50 px-10 py-5 flex justify-between items-center">
+    <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center gap-4">
+            <img src="https://media.discordapp.net/attachments/1368138826337357865/1369672165259083796/VIMSL.png" class="h-10 w-auto">
+            <span class="font-black text-xl italic uppercase tracking-tighter">VIM <span class="text-blue-500">SUPER</span> LEAGUE</span>
+        </a>
+    </div>
+    
+    <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/market" class="hover:text-white transition">Market</a>
+        <a href="/matches" class="hover:text-white transition">Matches</a>
+        <a href="/admin" class="hover:text-blue-500 transition">Admin</a>
+    </div>
+
+    <a href="https://discord.gg/VMXTCyAu6z" class="bg-[#5865F2] px-7 py-2.5 rounded-full text-xs font-bold transition">Join Discord</a>
+</nav>

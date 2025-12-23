@@ -1,0 +1,52 @@
+<%- include('partials/navbar') %>
+
+<main class="py-10">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-24">
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-8 italic uppercase leading-none">
+            YOU CHOOSE <span class="text-blue-500">US!</span>
+        </h1>
+        <div class="glass rounded-[40px] overflow-hidden mb-12 border-white/10 p-2 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+            <img src="https://media.discordapp.net/attachments/1368138826337357865/1369672207814627358/vimgfx.png?ex=694b4665&is=6949f4e5&hm=cca3a53f3ff48d38dbc4666199b5f645691547edb246bded15ef50cd0c760e7c&=&format=webp&quality=lossless" class="w-full h-auto rounded-[35px]">
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-32">
+        <div class="glass p-10 rounded-3xl text-center border-white/5">
+            <h4 class="text-blue-500 font-black text-4xl mb-2"><%= players.length %></h4>
+            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Registered Agents</p>
+        </div>
+        <div class="glass p-10 rounded-3xl text-center border-white/5">
+            <h4 class="text-blue-500 font-black text-4xl mb-2"><%= matches.length %></h4>
+            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Upcoming Matches</p>
+        </div>
+        <div class="glass p-10 rounded-3xl text-center border-white/5">
+            <h4 class="text-blue-500 font-black text-4xl mb-2">LIVE</h4>
+            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Broadcast Status</p>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 mb-32">
+        <h2 class="text-3xl font-black italic uppercase mb-12 text-center">Start Your <span class="text-blue-500">Career</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/50 flex items-center justify-center font-black text-xl mb-6">1</div>
+                <h3 class="font-bold uppercase mb-2">Join Discord</h3>
+                <p class="text-sm opacity-50">Connect with the community and team scouts.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/50 flex items-center justify-center font-black text-xl mb-6">2</div>
+                <h3 class="font-bold uppercase mb-2">Market Listing</h3>
+                <p class="text-sm opacity-50">Register as a Free Agent to show your skills.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/50 flex items-center justify-center font-black text-xl mb-6">3</div>
+                <h3 class="font-bold uppercase mb-2">Get Signed</h3>
+                <p class="text-sm opacity-50">Compete in the highest level of Roblox football.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="/market" class="bg-white text-black px-16 py-6 rounded-full font-black text-sm uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-[0_10px_30px_rgba(255,255,255,0.1)]">Enter the Hub</a>
+    </div>
+</main>
