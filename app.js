@@ -61,7 +61,5 @@ app.post('/admin/delete-player', (req, res) => {
 const port = process.env.PORT || 10000;
 app.listen(port, () => {
   console.log(`Live at http://localhost:${port}`);
+  console.log(`VIM Hub running on port ${port}`);
 });
-  console.log(`VIM Hub running on port ${PORT}`);
-});
-
