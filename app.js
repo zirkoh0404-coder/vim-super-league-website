@@ -58,10 +58,10 @@ app.post('/admin/delete-player', (req, res) => {
     saveData(data);
     res.redirect('/admin');
 });
-
-
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
+const port = process.env.PORT || 10000;
+app.listen(port, () => {
+  console.log(`Live at http://localhost:${port}`);
+});
   console.log(`VIM Hub running on port ${PORT}`);
 });
+
