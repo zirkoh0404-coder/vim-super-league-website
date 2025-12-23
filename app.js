@@ -1,9 +1,11 @@
 const express = require('express');
+const path = require('path'); // <--- Add this
 const fs = require('fs');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 const DATA_FILE = './data.json';
@@ -63,3 +65,4 @@ app.listen(port, () => {
   console.log(`Live at http://localhost:${port}`);
   console.log(`VIM Hub running on port ${port}`);
 });
+
